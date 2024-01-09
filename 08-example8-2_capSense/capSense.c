@@ -7,7 +7,7 @@
 #include <avr/interrupt.h>
 #include <avr/delay.h>
 #include <avr/power.h>
-//#include "USART.h"
+#include "USART.h"
 
 #define SENSE_TIME              50
 #define THRESHOLD               6000
@@ -36,8 +36,8 @@ int main(void)
 
     LED_DDR = (1 << LED_PIN);                   //Set LED as output
 
-//    initUSART();                                //Initialize USART
-//    printString("Capacitive Sensor\r\n");
+    initUSART();                                //Initialize USART
+    printString("Capacitive Sensor\r\n");
 
     //Main Loop
     while(1)
@@ -58,8 +58,8 @@ int main(void)
         {
             LED_PORT = 0x00;
         }
-//        printWord(chargeCycleCount);            //print for calibration
-//        printString("\r\n");
+        printWord(chargeCycleCount);            //print for calibration
+        printString("\r\n");
     }
     //End Main loop
 
