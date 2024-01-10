@@ -1,5 +1,5 @@
 /* Capacitive touch sensor.
-    This program controls a capacitive touch sensor by counting how many times the capacitor charged and discharged in a period of time.
+    This program controls a capacitive touch sensor by counting how many times the capacitor is charged and discharged in a period of time.
     The program uses pin-change interrupt to count each charge-discharge cycle and evaluates if the sensor was pressed or not.
     The charge-discharge cycle count gets transmitted through serial.
 */
