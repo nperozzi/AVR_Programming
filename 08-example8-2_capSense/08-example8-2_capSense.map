@@ -174,7 +174,7 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x26e
+.text           0x00000000      0x266
  *(.vectors)
  .vectors       0x00000000       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
                 0x00000000                __vectors
@@ -260,24 +260,24 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .text.__vector_4
                 0x000000a6       0x34 capSense.o
                 0x000000a6                __vector_4
- .text.main     0x000000da       0x8a capSense.o
+ .text.main     0x000000da       0x82 capSense.o
                 0x000000da                main
  .text.initUSART
-                0x00000164       0x22 ../../AVR-Programming-Library/USART.o
-                0x00000164                initUSART
+                0x0000015c       0x22 ../../AVR-Programming-Library/USART.o
+                0x0000015c                initUSART
  .text.printString
-                0x00000186       0x22 ../../AVR-Programming-Library/USART.o
-                0x00000186                printString
+                0x0000017e       0x22 ../../AVR-Programming-Library/USART.o
+                0x0000017e                printString
  .text.printWord
-                0x000001a8       0x9a ../../AVR-Programming-Library/USART.o
-                0x000001a8                printWord
- .text.libgcc   0x00000242       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
-                0x00000242                __udivmodhi4
-                0x0000026a                . = ALIGN (0x2)
+                0x000001a0       0x9a ../../AVR-Programming-Library/USART.o
+                0x000001a0                printWord
+ .text.libgcc   0x0000023a       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x0000023a                __udivmodhi4
+                0x00000262                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000026a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x0000026a                exit
-                0x0000026a                _exit
+ .fini9         0x00000262        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000262                exit
+                0x00000262                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -296,40 +296,40 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000026a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000262        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x0000026e                _etext = .
+                0x00000266                _etext = .
 
-.data           0x00800100       0x18 load address 0x0000026e
+.data           0x00800100        0x4 load address 0x00000266
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
- .data          0x00800100       0x17 capSense.o
+ .data          0x00800100        0x3 capSense.o
  *(.data*)
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x00800118                . = ALIGN (0x2)
- *fill*         0x00800117        0x1 00
-                0x00800118                _edata = .
-                0x00800118                PROVIDE (__data_end, .)
+                0x00800104                . = ALIGN (0x2)
+ *fill*         0x00800103        0x1 00
+                0x00800104                _edata = .
+                0x00800104                PROVIDE (__data_end, .)
 
-.bss            0x00800118        0x2
-                0x00800118                PROVIDE (__bss_start, .)
+.bss            0x00800104        0x2
+                0x00800104                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  *(COMMON)
- COMMON         0x00800118        0x2 capSense.o
-                0x00800118                chargeCycleCount
-                0x0080011a                PROVIDE (__bss_end, .)
-                0x0000026e                __data_load_start = LOADADDR (.data)
-                0x00000286                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800104        0x2 capSense.o
+                0x00800104                chargeCycleCount
+                0x00800106                PROVIDE (__bss_end, .)
+                0x00000266                __data_load_start = LOADADDR (.data)
+                0x0000026a                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080011a        0x0
-                0x0080011a                PROVIDE (__noinit_start, .)
+.noinit         0x00800106        0x0
+                0x00800106                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x0080011a                PROVIDE (__noinit_end, .)
-                0x0080011a                _end = .
-                0x0080011a                PROVIDE (__heap_start, .)
+                0x00800106                PROVIDE (__noinit_end, .)
+                0x00800106                _end = .
+                0x00800106                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -406,10 +406,10 @@ LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
  .debug_abbrev  0x00000000      0x127 capSense.o
  .debug_abbrev  0x00000127      0x1a3 ../../AVR-Programming-Library/USART.o
 
-.debug_line     0x00000000      0x6a0
+.debug_line     0x00000000      0x698
  *(.debug_line)
- .debug_line    0x00000000      0x241 capSense.o
- .debug_line    0x00000241      0x45f ../../AVR-Programming-Library/USART.o
+ .debug_line    0x00000000      0x239 capSense.o
+ .debug_line    0x00000239      0x45f ../../AVR-Programming-Library/USART.o
 
 .debug_frame    0x00000000      0x100
  *(.debug_frame)

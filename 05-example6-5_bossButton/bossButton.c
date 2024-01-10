@@ -19,6 +19,7 @@ int main(void)
             transmitByte('X');
             blinkLED();
         }
+        transmitByte('X');
     }
     return 0;
 }
